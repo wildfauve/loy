@@ -5,6 +5,10 @@ class Transaction
   field :value, :type => Float
   field :calc_points, :type => Integer
   
-  embeds_many :skus
+  embeds_many :items
+  
+  belongs_to :account
+  
+  
   
 end

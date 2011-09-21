@@ -51,5 +51,6 @@ module Loy
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.jsonify_format = :pretty
   end
 end

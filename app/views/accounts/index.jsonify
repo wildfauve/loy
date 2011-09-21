@@ -1,0 +1,7 @@
+json.accounts(@accounts) do |account|
+		json.link do
+			json.uri account.link.uri
+			json.rel account.link.rel
+			json.desc account.type.to_s
+		end
+end

@@ -1,0 +1,16 @@
+<% if @accounts.count != 0 %>
+	<p><strong>Accounts</strong>
+		<table>
+			<tr>
+				<% for acc in @accounts -%>
+						<p><%= acc.card_number %> </p>
+						<p><%= acc.type.to_s %> </p>
+						<p><%= link_to "remove", acc, :method => :delete %></p>
+					</td>
+				<% end %>
+			</tr>
+		</table>
+	</p>
+<%end%>
+
+<p><%= link_to "New Account", new_account_path, :class => "link" %></p>
